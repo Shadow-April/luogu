@@ -1,19 +1,18 @@
 /*************************************************************************
-	> File Name: year.cpp
+	> File Name: autocr.cpp
 	> Author: april
 	> Mail: aprildykj@gmail.com 
-	> Created Time: Sat, Sep 12, 2020  4:04:41 PM
+	> Created Time: Mon, Oct  5, 2020 12:00:36 PM
  ************************************************************************/
 
 #include<bits/stdc++.h>
 using namespace std;
-int year,month;
-int m[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
 int main()
 {
-	cin>>year>>month;
-	if(year%4==0&&year%100!=0||year%400==0) m[2]=29;
-	cout<<m[month];
+	string s;
+	getline(cin,s);
+	for(int i=0;i<s.size();i++)
+		if(s[i]>='a' && s[i]<='z') s[i]-=32;
+	cout<<s;
 	return 0;
 }
-
